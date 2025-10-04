@@ -3,7 +3,6 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-18-336791?style=for-the-badge&logo=postgresql)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04%20LTS-E95420?style=for-the-badge&logo=ubuntu)
 ![Status](https://img.shields.io/badge/Status-Active%20Learning-success?style=for-the-badge)
-![Study](https://img.shields.io/badge/Sessions-50min%20Daily-blue?style=for-the-badge)
 
 ## 🎯 Daily Learning Protocol
 
