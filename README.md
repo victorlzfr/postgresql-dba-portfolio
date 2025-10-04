@@ -7,9 +7,9 @@
 ## 🎯 Daily Learning Protocol
 
 ### Session Structure
-- **Duration**: 50 minutes focused study
-- **Frequency**: Daily
-- **Documentation**: Each session → commit + milestone
+- **Duration**: Flexible time commitment per session
+- **Frequency**: As needed for skill progression
+- **Documentation**: Each achievement → commit + milestone
 - **Focus**: Hands-on PostgreSQL DBA skills
 
 ### Progress Metrics
