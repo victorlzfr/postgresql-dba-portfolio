@@ -15,7 +15,7 @@
 
 ### Progress Metrics
 - **Sessions Completed**: 2
-- **Total Hours**: 5 hours 9 minutes
+- **Total Hours**: 5 hours 23 minutes 35 seconds
 - **Current Streak**: 2 days
 - **Skills Mastered**: Source Installation, SSH Configuration
 
