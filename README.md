@@ -13,7 +13,7 @@
 - **Focus**: Hands-on PostgreSQL DBA skills
 
 ### Progress Metrics
-- **Sessions Completed**: 2
+- **Sessions Completed**: 6
 - **Total Hours**: 5 hours 23 minutes 35 seconds
 - **Current Streak**: 2 days
 - **Skills Mastered**: Source Installation, SSH Configuration
