@@ -30,17 +30,6 @@
 - **2024-10-02**: PostgreSQL 18 source installation and first database server
 - **2024-10-04**: GitHub SSH authentication setup and project restructuring
 
-## 🗂️ Project Structure
-postgresql-dba-portfolio/
-├── milestones/           # Daily session documentation
-│   ├── 01_source_installation.md
-│   ├── 02_ssh_setup_github.md
-│   └── milestone_template.md
-├── scripts/             # DBA scripts collection
-├── configs/             # Configuration examples
-├── exercises/           # Practice problems
-└── notes/              # Conceptual knowledge
-
 ## 📝 Session Template
 - **Achievement**: [Main accomplishment]
 - **Date**: YYYY-MM-DD
