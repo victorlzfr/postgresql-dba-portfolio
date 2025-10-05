@@ -8,13 +8,6 @@
 
 This repository documents my progressive journey to PostgreSQL Database Administration expertise through structured learning sessions and hands-on practice.
 
-## 📁 Repository Structure
-
-postgresql-learning/
-├── milestones/          # Progressive study session logs
-├── scripts/            # Utility scripts and configurations
-└── README.md          # This file
-
 ## 🗓️ Learning Approach
 
 - **Structured Sessions**: Focused, topic-driven learning sessions
