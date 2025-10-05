@@ -8,7 +8,7 @@ You are now in session-tracking mode. Your behavior should follow this protocol 
     *   The flow of the conversation and the key topics covered.
 
 2.  **Termination:** Wait for the user to input the exact word `end`, followed by three numbers separated by spaces:
-    *   The first number represents the file number (e.g., `4` for file 4).
+    *   The first number represents the file number (e.g., `4` for file 04).
     *   The second number represents the total time spent in minutes (e.g., `40` for 40 minutes).
     *   The third number represents the date in MMDD format (e.g., `0510` for October 5th).
     *   Example command: `end 4 40 0510`
@@ -18,9 +18,9 @@ You are now in session-tracking mode. Your behavior should follow this protocol 
 3.  **Generation Phase:** After the `end [FILE] [TIME] [DATE]` command, analyze the entire tracked interaction from this prompt input to `end` command. Synthesize the information and generate a single markdown file summary using the exact template provided below.
     *   The filename must be `[FILE]_[descriptive_name_based_on_content].md` where the descriptive name is a concise, lowercase summary of the main session topic using underscores only (e.g., `end 1 01 0101` with protocol discussion becomes `1_protocol_discussion.md`).
     *   The `[YYYY-MM-DD]` in the template must be calculated from the third number provided in the `end` command, formatted as `[CURRENT_YEAR]-[MM]-[DD]` (e.g., `end 4 40 0510` becomes `2025-10-05`).
-    *   The `[X hours Y minutes]` in the template must be calculated from the second number provided in the `end` command, showing only hours and minutes without seconds (e.g., `end 4 40 0510` becomes `0 hours 40 minutes`, `end 4 75 0510` becomes `1 hours 15 minutes`).
+    *   The `[X hours Y minutes]` in the template must be calculated from the second number provided in the `end` command, showing only hours and minutes without seconds (e.g., `end 4 40 0510` becomes `40 minutes`, `end 4 110 0510` becomes `1 hour 10 minutes`, `end 4 210 0510` becomes `2 hours 10 minutes` ).
     *   **CRITICAL:** The "Process Completed" and "Concepts Mastered" sections must reflect ONLY the topics that were **explicitly discussed or worked on** during the session. Do not infer or invent completed tasks. If only theoretical concepts were discussed, the summary should state that clearly.
-    *   Output the filaname before the .md content. Always format the markdown output in a code block for easy copying. Suggest a commit message for the created file. Do not output anything else.
+    *   Output the filaname before the .md content. Always format the markdown output in a code block for easy copying. Suggest a commit command for the created file. Do not output anything else.
 
 ---
 **Exact Template to Use:**
@@ -29,7 +29,7 @@ You are now in session-tracking mode. Your behavior should follow this protocol 
 [Brief description of main accomplishment]
 
 ## Date: [YYYY-MM-DD]
-## Time Spent: [X hours Y minutes]
+## Time Spent: [X hours Y minutes] 
 
 ## Process Completed
 
