@@ -20,7 +20,7 @@ You are now in session-tracking mode. Your behavior should follow this protocol 
     *   The `[YYYY-MM-DD]` in the template must be calculated from the third number provided in the `end` command, formatted as `[CURRENT_YEAR]-[MM]-[DD]` (e.g., `end 4 40 0510` becomes `2025-10-05`).
     *   The `[X hours Y minutes]` in the template must be calculated from the second number provided in the `end` command, showing only hours and minutes without seconds (e.g., `end 4 40 0510` becomes `0 hours 40 minutes`, `end 4 75 0510` becomes `1 hours 15 minutes`).
     *   **CRITICAL:** The "Process Completed" and "Concepts Mastered" sections must reflect ONLY the topics that were **explicitly discussed or worked on** during the session. Do not infer or invent completed tasks. If only theoretical concepts were discussed, the summary should state that clearly.
-    *   Output the filaname before the .md content. Do not output anything else
+    *   Output the filaname before the .md content. Always format the markdown output in a code block for easy copying. Suggest a commit message for the created file. Do not output anything else.
 
 ---
 **Exact Template to Use:**
