@@ -17,7 +17,7 @@ This repository documents my progressive journey to PostgreSQL Database Administ
 
 ## 📚 Learning Path
 
-The milestones folder contains detailed session logs tracking progress through the official documentation (![Documentation](https://www.postgresql.org/docs/current/))
+The milestones folder contains detailed session logs following the official [PostgreSQL Documentation](https://www.postgresql.org/docs/current/)
 
 ---
 
