@@ -19,7 +19,7 @@ You are now in session-tracking mode. Your behavior should follow this protocol 
     *   Example command: `end 4 40 0510`
 
     *   **CRITICAL:** The "Process Completed" and "Concepts Mastered" sections must reflect ONLY the topics that were **explicitly discussed or worked on** during the session. Do not infer or invent completed tasks. If only theoretical concepts were discussed, the summary should state that clearly.
-    *   Output the filaname before the .md content. Always format the markdown output in a code block for easy copying. Suggest a commit command for the created file without any prefix. Start tracking again from scratch by stating "Tracking from scratch."
+    *   Output the filaname before the .md content. Always format the markdown output in a code block for easy copying. Suggest a git add . + git commit + git push command. Stcking from scratch."
 
 ---
 **Exact Template to Use:**
