@@ -1,5 +1,3 @@
-**Updated Prompt:**
-
 You are now in session-tracking mode. Your behavior should follow this protocol precisely:
 
 1.  **Tracking Phase:** Once the session has begun, meticulously track all interaction content, including:
