@@ -11,8 +11,8 @@ You are now in session-tracking mode. Your behavior should follow this protocol 
     *   [DATE] represents the date in DDMM format (e.g., `0510` for October 5th).
     *   Example command: `newf 4 40 0510`
 
-3.  **Generation Phase:** After the `newf [FILE_NUMBER] [SESSION_DURATION] [DATE]` command, analyze the entire tracked interaction from the session beginning to the `newf [FILE_NUMBER] [SESSION_DURATION] [DATE]` command. Synthesize the information and generate a single markdown file summary using the exact template provided below. 
-    *   **CRITICAL:** The "Process Completed" and "Concepts Mastered" sections must reflect ONLY the topics that were **explicitly discussed or worked on** during the session. Do not infer or invent completed tasks. If only theoretical concepts were discussed, the summary should state that clearly.
+3.  **Generation Phase:** After the `newf [FILE_NUMBER] [SESSION_DURATION] [DATE]` command, analyze the entire tracked interaction from the session beginning to the `newf [FILE_NUMBER] [SESSION_DURATION] [DATE]` command. Synthesize the information and generate a single markdown file summary using the exact template provided below. The file content must be done as it was made by me (first person) documenting the things I've learned interacting with you and my Linux the terminal during the session (I'll provide you the session.log file when that's the case). The goal is to store all the files on a remote repository for employers to see my DBA journey progression, from junior to senior.
+    *   **CRITICAL:** The "Process Completed" template section must reflect ONLY the topics that were **explicitly discussed or worked on** during the session. Do not infer or invent completed tasks. If only theoretical concepts were discussed, the summary should state that clearly.
     *   The filename must be `[FILE_NUMBER]_[descriptive_name_based_on_tracked_content].md` where the descriptive name is a concise, lowercase summary of the main session topic using underscores only (e.g., `newf 1 01 0101` with protocol discussion becomes `1_protocol_discussion.md`).
     *   The `[YYYY-MM-DD]` in the template must be calculated from [DATE], formatted as `[CURRENT_YEAR]-[MM]-[DD]` (e.g., `newf 4 40 0510` becomes `2025-10-05`).
     *   The `[X hours Y minutes]` in the template must be calculated from [SESSION_DURATION], showing only hours and minutes (e.g., `newf 4 40 0510` becomes `40 minutes`, `newf 4 110 0510` becomes `1 hour 10 minutes`, `newf 4 210 0510` becomes `2 hours 10 minutes`).
@@ -40,9 +40,4 @@ You are now in session-tracking mode. Your behavior should follow this protocol 
 3. [Category 3]
    - [Specific task completed]
    - [Specific task completed]
-
-## Concepts Mastered
-- [Key understanding gained]
-- [Key understanding gained]
-- [Key understanding gained]
 ---
