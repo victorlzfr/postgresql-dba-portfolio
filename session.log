@@ -1,369 +1,11 @@
-Script started on 2025-10-06 13:04:44-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="117" LINES="28"]
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ ls -l
+Script started on 2025-10-06 13:37:47-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="117" LINES="28"]
+[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ sudo systemctl enable postgresql[10Pps aux | grep postgressudo systemctl status postgresql[10Pps aux | grep postgressudo systemctl enable postgresql[Kls -l/[K
 [?2004ltotal 12
 -rw-r--r-- 1 victorlzfr victorlzfr 1057 Oct  5 12:11 README.md
-drwxr-xr-x 2 victorlzfr victorlzfr 4096 Oct  5 17:57 [0m[01;34mmilestones[0m
-drwxr-xr-x 2 victorlzfr victorlzfr 4096 Oct  5 17:54 [01;34mscripts[0m
--rw-r--r-- 1 victorlzfr victorlzfr    0 Oct  6 13:04 session.log
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ ls
-[?2004lREADME.md  [0m[01;34mmilestones[0m  [01;34mscripts[0m  session.log
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ copy scripts/prompt_protocol.txt [1@<[1@ 
-[?2004l[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7msudo pkill postgres[27msudo pkill postgres
-[?2004l[sudo] password for victorlzfr: 
-Sorry, try again.
-[sudo] password for victorlzfr: 
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7msudo chmod 0700 /usr/local/pgsql/data[27msudo chmod 0700 /usr/local/pgsql/data
-[?2004l[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7msudo chown -R postgres:postgres /usr/local/pgsql/data[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo chown -R postgres:postgres /usr/local/pgsql/data
-[?2004l[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7msudo ls -la /usr/local/pgsql/ | grep data[27msudo ls -la /usr/local/pgsql/ | grep data
-[?2004ldrwx------ 19 postgres postgres 4096 Oct  5 17:06 [01;31m[Kdata[m[K
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7msudo -u postgres /usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo -u postgres /usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data
-[?2004l2025-10-06 13:10:45.426 -03 [1013] LOG:  starting PostgreSQL 19devel on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 11.4.0-1ubuntu1~22.04.2) 11.4.0, 64-bit
-2025-10-06 13:10:45.427 -03 [1013] LOG:  listening on IPv4 address "127.0.0.1", port 5432
-2025-10-06 13:10:45.438 -03 [1013] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
-2025-10-06 13:10:45.454 -03 [1019] LOG:  database system was interrupted; last known up at 2025-10-05 17:38:50 -03
-2025-10-06 13:10:45.752 -03 [1019] LOG:  database system was not properly shut down; automatic recovery in progress
-2025-10-06 13:10:45.758 -03 [1019] LOG:  redo starts at 0/0249AF20
-2025-10-06 13:10:45.758 -03 [1019] LOG:  invalid record length at 0/0249B028: expected at least 24, got 0
-2025-10-06 13:10:45.758 -03 [1019] LOG:  redo done at 0/0249AFF0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
-2025-10-06 13:10:45.767 -03 [1017] LOG:  checkpoint starting: end-of-recovery fast wait
-2025-10-06 13:10:45.793 -03 [1017] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.008 s, sync=0.004 s, total=0.030 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/0249B028, redo lsn=0/0249B028
-2025-10-06 13:10:45.799 -03 [1013] LOG:  database system is ready to accept connections
-^C2025-10-06 13:13:13.016 -03 [1013] LOG:  received fast shutdown request
-2025-10-06 13:13:13.021 -03 [1013] LOG:  aborting any active transactions
-2025-10-06 13:13:13.023 -03 [1013] LOG:  background worker "logical replication launcher" (PID 1022) exited with exit code 1
-2025-10-06 13:13:13.023 -03 [1017] LOG:  shutting down
-2025-10-06 13:13:13.027 -03 [1017] LOG:  checkpoint starting: shutdown fast
-2025-10-06 13:13:13.043 -03 [1017] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.020 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB; lsn=0/0249B0D8, redo lsn=0/0249B0D8
-2025-10-06 13:13:13.056 -03 [1013] LOG:  database system is shut down
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ ps aux
-[?2004lUSER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root           1  0.5  0.2 166012 10740 ?        Ss   12:53   0:05 /sbin/init
-root           2  0.0  0.0   3072  1792 ?        Sl   12:53   0:00 /init
-root           7  0.0  0.0   3088  2176 ?        Sl   12:53   0:00 plan9 --control-socket 7 --log-level 4 --server-fd
-root          73  0.1  0.3  64404 14528 ?        S<s  12:53   0:01 /lib/systemd/systemd-journald
-root          99  0.0  0.1  23236  5888 ?        Ss   12:53   0:01 /lib/systemd/systemd-udevd
-root         103  0.0  0.0 152992  1536 ?        Ssl  12:53   0:00 snapfuse /var/lib/snapd/snaps/bare_5.snap /snap/ba
-root         109  0.0  0.0 153520  1280 ?        Ssl  12:53   0:00 snapfuse /var/lib/snapd/snaps/chromium_3251.snap /
-root         115  0.3  0.3 601576 12196 ?        Ssl  12:53   0:03 snapfuse /var/lib/snapd/snaps/core22_2133.snap /sn
-root         122  0.0  0.0 152992  1408 ?        Ssl  12:53   0:00 snapfuse /var/lib/snapd/snaps/cups_1100.snap /snap
-root         128  0.1  0.2 377284 10456 ?        Ssl  12:53   0:01 snapfuse /var/lib/snapd/snaps/cups_1112.snap /snap
-root         137  0.0  0.0 153124  1408 ?        Ssl  12:53   0:00 snapfuse /var/lib/snapd/snaps/gnome-42-2204_226.sn
-root         143  0.0  0.0 153124  1284 ?        Ssl  12:53   0:00 snapfuse /var/lib/snapd/snaps/gtk-common-themes_15
-root         148  1.1  0.3 601576 12896 ?        Ssl  12:53   0:13 snapfuse /var/lib/snapd/snaps/snapd_25202.snap /sn
-systemd+     191  0.1  0.3  26200 14072 ?        Ss   12:53   0:01 /lib/systemd/systemd-resolved
-systemd+     202  0.0  0.1  89364  7168 ?        Ssl  12:53   0:01 /lib/systemd/systemd-timesyncd
-root         267  0.0  0.0   4308  2560 ?        Ss   12:53   0:00 /usr/sbin/cron -f -P
-message+     269  0.0  0.1   8804  4224 ?        Ss   12:53   0:00 @dbus-daemon --system --address=systemd: --nofork 
-root         274  0.0  0.4  30092 18432 ?        Ss   12:53   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --ru
-syslog       275  0.0  0.1 222404  5632 ?        Ssl  12:53   0:00 /usr/sbin/rsyslogd -n -iNONE
-root         276  0.0  0.0   2892  1280 ?        Ss   12:53   0:00 /bin/sh /snap/cups/1112/scripts/run-cups-browsed
-root         277  0.0  0.0   2892  1024 ?        Ss   12:53   0:00 /bin/sh /snap/cups/1112/scripts/run-cupsd
-root         279  0.2  0.9 2218552 37732 ?       Ssl  12:53   0:02 /usr/lib/snapd/snapd
-root         296  0.0  0.1  15324  7296 ?        Ss   12:54   0:00 /lib/systemd/systemd-logind
-root         318  0.0  0.0   3240  2176 hvc0     Ss+  12:54   0:00 /sbin/agetty -o -p -- \u --noclear --keep-baud con
-root         321  0.0  0.0   3196  2176 tty1     Ss+  12:54   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
-root         332  0.0  0.5 107152 21248 ?        Ssl  12:54   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/un
-root         384  0.0  0.1   7524  4480 pts/1    Ss   12:54   0:00 /bin/login -f
-victorl+     480  0.0  0.2  17072  9472 ?        Ss   12:54   0:00 /lib/systemd/systemd --user
-victorl+     488  0.0  0.1 103528  5248 ?        S    12:54   0:00 (sd-pam)
-victorl+     520  0.0  0.1   6236  4864 pts/1    S+   12:54   0:00 -bash
-root         688  0.0  0.3 135136 11776 ?        Sl   12:54   0:00 cupsd -f -s /var/snap/cups/common/etc/cups/cups-fi
-root         703  0.0  0.4 260136 16512 ?        Sl   12:54   0:00 cups-browsed -c /var/snap/cups/common/etc/cups/cup
-snap_da+     715  0.0  0.1  14696  5888 ?        S    12:54   0:00 /snap/cups/1112/lib/cups/notifier/dbus dbus://
-root         792  0.0  0.0   3076  1032 ?        Ss   12:56   0:00 /init
-root         793  0.0  0.0   3092  1164 ?        S    12:56   0:00 /init
-victorl+     799  0.0  0.1   6340  5376 pts/0    Ss   12:56   0:00 -bash
-root         891  0.0  0.2 235436  8028 ?        Ssl  12:58   0:00 /usr/libexec/polkitd --no-debug
-victorl+     948  0.0  0.0   3228  2048 pts/0    D+   13:05   0:00 script session.log
-victorl+     949  0.0  0.1   6220  5120 pts/2    Ss   13:05   0:00 bash -i
-victorl+    1023  0.0  0.0   7484  3072 pts/2    R+   13:13   0:00 ps aux
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7msudo -u postgres /usr/local/pgsql/bin/psql[27msudo -u postgres /usr/local/pgsql/bin/psql
-[?2004lpsql: error: connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
-	Is the server running locally and accepting connections on that socket?
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7msudo -u postgres /usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data [27m[7m-[27m[7ml /usr/local/pgsql/logfile[27m[A]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ sudo -u postgres /usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data -l /usr/local/pgsql/logfile
-[?2004lwaiting for server to start.... done
-server started
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ sudo -u postgres /usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data -l /usr/local/pgsql/logfile[A]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csql[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-[?2004lpsql (19devel)
-Type "help" for help.
-
-[?2004hpostgres=# \q
-[?2004l[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ 
-[7mvictorlzfr@Victor:~/postgresql-learning$ sudo [27m[1Pvictorlzfr@Victor:~/postgresql-learning$ sudo[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7msudo systemctl status postgresql[27msudo systemctl status postgresql
-[?2004l[?1h=Unit postgresql.service could not be found.[m
-[K[?1l>[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7msudo nano /etc/systemd/system/postgresql.service[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo nano /etc/systemd/system/postgresql.service
-[?2004l[?2004h[?1049h[22;0;0t[1;28r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[26;53H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 6.2                            /etc/systemd/system/postgresql.service                                     [1;116H(B[m[27d(B[0;7m^G(B[m Help[27;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[27;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[28d(B[0;7m^X(B[m Exit[28;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[28;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[2d[?12l[?25h[?25l[26d[K[1;82H(B[0;7m*[116G(B[m[3d[36m# File descriptors[4d[39m(B[mLimitNOFILE=65536[6d[36m# Disable OOM kill on the postmaster[7d[39m(B[mOOMScoreAdjust=-1000[9d[36m# Where to send early-startup messages from the server[10d[39m(B[mStandardOutput=syslog[11dStandardError=syslog[13d(B[0;1m[32m[Install][14d[39m(B[mWantedBy=multi-user.target[?12l[?25h[?25l[?12l[?25h[13;10H[?25l[?12l[?25h[A[?25l[?12l[?25h[11;21H[?25l[?12l[?25h[Ag[?25l[?12l[?25h[9;27H[?25l[?12l[?25h[A[?25l[?12l[?25h[7;21H[?25l[?12l[?25h[6;27H[?25l[?12l[?25h[7;21H[?25l[?12l[?25h[6;27H[?25l[?12l[?25h[7;21H[?25l[?12l[?25h[8d[?25l[?12l[?25h[9;27H[?25l[?12l[?25h[10;22H[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13;10H[?25l[?12l[?25h[14;27H[?25l[?12l[?25h[15d[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[14;27H[?25l[K[?12l[?25h[?25lWantedBy=multi-user.target[15d[?12l[?25h[?25l[?12l[?25h[A[?25l[K[?12l[?25h[?25lWantedBy=multi-user.target[15d[?12l[?25h[?25l[?12l[?25h[A[?25l[K[?12l[?25h[?25lAfter=network-online.target[?12l[?25h[?25l[K[?12l[?25h[?25lAfter=network-online.target[15d[?12l[?25h[?25l[26;50H(B[0;7m[ Nothing was cut ](B[m[?12l[?25h[15d[?25l[?12l[?25h[A[?25l[K[26d[K[14d[?12l[?25h[?25l[26d[14dWantedBy=multi-user.target[?12l[?25h[?25l[26d(B[0;7mSave modified buffer?                                                                                                [27;1H Y(B[m Yes[K[28d(B[0;7m N(B[m No  [28;18H(B[0;7mC(B[m Cancel[K[26;23H[?12l[?25h[?25l[27d(B[0;7m^G(B[m Help[27;30H(B[0;7mM-D(B[m DOS Format[27;59H(B[0;7mM-A(B[m Append[27;88H(B[0;7mM-B(B[m Backup File[28d(B[0;7m^C(B[m Cancel[17G             (B[0;7mM-M(B[m Mac Format[28;59H(B[0;7mM-P(B[m Prepend[28;88H(B[0;7m^T(B[m Browse[26d(B[0;7mFile Name to Write: /etc/systemd/system/postgresql.service(B[m[?12l[?25h[?25l[26;51H[1K (B[0;7m[ Writing... ](B[m[K[1;82H(B[0;7m [116G(B[m[26;50H(B[0;7m[ Wrote 28 lines ](B[m[J[28d[?12l[?25h[28;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ sudo nano /etc/systemd/system/postgresql.service
-[?2004l[?2004h[?1049h[22;0;0t[1;28r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[26;52H(B[0;7m[ Reading... ](B[m[26;51H(B[0;7m[ Read 28 lines ](B[m[H(B[0;7m  GNU nano 6.2                            /etc/systemd/system/postgresql.service                                     [1;116H(B[m[27d(B[0;7m^G(B[m Help[27;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[27;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[28d(B[0;7m^X(B[m Exit[28;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[28;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[2d(B[0;1m[32m[Unit][3d[39m(B[mDescription=PostgreSQL 19 Database Server[4dDocumentation=man:postgres(1)[5dAfter=network-online.target[6dWants=network-online.target[8d(B[0;1m[32m[Service][9d[39m(B[mType=notify[10dUser=postgres[11dGroup=postgres[12dExecStart=/usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data[13dExecReload=/bin/kill -HUP $MAINPID[14dKillMode=mixed[15dKillSignal=SIGINT[16dTimeoutSec=0[18d[36m# File descriptors[19d[39m(B[mLimitNOFILE=65536[21d[36m# Disable OOM kill on the postmaster[22d[39m(B[mOOMScoreAdjust=-1000[24d[36m# Where to send early-startup messages from the server[25d[39m(B[mStandardOutput=syslog[2d[?12l[?25h[?25l[26;51H  (B[0;7m[ Mark Set ](B[m[K[1;112H(B[0;7mM   (B[m[?12l[?25h[2d[?25l[36m# Where to send early-startup messages from the server[3d[39m(B[mStandardOutput=syslog[K[4dStandardError=syslog[K[5d[K[6d(B[0;1m[32m[Install][39m(B[m[K[7dWantedBy=multi-user.target[8d[K[9d[K[10d[K[11d[K[12d[K[13d[K[14d[K[15d[K[16d[K[18d[K[19d[K[21d[K[22d[K[24d[K[25d[K[2d[?12l[?25h[?25l(B[0;7m# Where to send early-startup messages from the server[3dStandardOutput=syslog[4dStandardError=syslog[6d[Install][7dWantedBy=multi-user.target[8d(B[m[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[1;82H(B[0;7m*[112G    (B[m[26d[K[1;116H[2d[K[3d[K[4d[K[6d[K[7d[K[2d[?12l[?25h[?25l[26d[2d(B[0;1m[32m[Unit][3d[39m(B[mDescription=PostgreSQL 19 Database Server[4dAfter=network.target[6d(B[0;1m[32m[Service][7d[39m(B[mType=forking[8dUser=postgres[9dGroup=postgres[10dExecStart=/usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data -l /usr/local/pgsql/logfile[11dExecStop=/usr/local/pgsql/bin/pg_ctl stop -D /usr/local/pgsql/data[12dExecReload=/usr/local/pgsql/bin/pg_ctl reload -D /usr/local/pgsql/data[13dTimeoutSec=300[15d(B[0;1m[32m[Install][16d[39m(B[mWantedBy=multi-user.target[?12l[?25h[?25l[?12l[?25h[15;10H[?25l[?12l[?25h[A[?25l[?12l[?25h[13;15H[?25l[?12l[?25h[12;27H[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[9;15H[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[4;21H[?25l[?12l[?25h[3;27H[?25l[?12l[?25h[2;7H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[26d(B[0;7mSave modified buffer?                                                                                                [27;1H Y(B[m Yes[K[28d(B[0;7m N(B[m No  [28;18H(B[0;7mC(B[m Cancel[K[26;23H[?12l[?25h[?25l[27d(B[0;7m^G(B[m Help[27;30H(B[0;7mM-D(B[m DOS Format[27;59H(B[0;7mM-A(B[m Append[27;88H(B[0;7mM-B(B[m Backup File[28d(B[0;7m^C(B[m Cancel[17G             (B[0;7mM-M(B[m Mac Format[28;59H(B[0;7mM-P(B[m Prepend[28;88H(B[0;7m^T(B[m Browse[26d(B[0;7mFile Name to Write: /etc/systemd/system/postgresql.service(B[m[?12l[?25h[?25l[26;51H[1K (B[0;7m[ Writing... ](B[m[K[1;82H(B[0;7m [116G(B[m[26;50H(B[0;7m[ Wrote 15 lines ](B[m[J[28d[?12l[?25h[28;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7msudo systemctl daemon-reload[27msudo systemctl daemon-reload
-[?2004l[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7msudo systemctl status postgresql[27msudo systemctl status postgresql
-[?2004l[?1h=○ postgresql.service - PostgreSQL 19 Database Server[m
-     Loaded: loaded (/etc/systemd/system/postgresql.service; disabled; vendor preset: enabled)[m
-     Active: inactive (dead)[m
-[K[?1l>[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7msudo systemctl start postgresql[27msudo systemctl start postgresql
-[?2004lJob for postgresql.service failed because the control process exited with error code.
-See "systemctl status postgresql.service" and "journalctl -xeu postgresql.service" for details.
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7msudo systemctl status postgresql.service[27msudo systemctl status postgresql.service
-[?2004l[?1h=[0;1;31m×[0m postgresql.service - PostgreSQL 19 Database Server[m
-     Loaded: loaded (/etc/systemd/system/postgresql.service; disabled; vendor preset: enabled)[m
-     Active: [0;1;31mfailed[0m (Result: exit-code) since Mon 2025-10-06 13:18:07 -03; 22s ago[m
-    Process: 1474 ExecStart=/usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data -l /usr/local/pgsql/logfile [0;1;31m([m[7m>[27m
-        CPU: 16ms[m
-[m
-Oct 06 13:18:07 Victor systemd[1]: Starting PostgreSQL 19 Database Server...[m
-Oct 06 13:18:07 Victor pg_ctl[1474]: pg_ctl: another server might be running; trying to start server anyway[m
-Oct 06 13:18:07 Victor pg_ctl[1474]: waiting for server to start.... stopped waiting[m
-Oct 06 13:18:07 Victor pg_ctl[1474]: pg_ctl: could not start server[m
-Oct 06 13:18:07 Victor pg_ctl[1474]: Examine the log output.[m
-Oct 06 13:18:07 Victor systemd[1]: [0;1;39m[0;1;31m[0;1;39mpostgresql.service: Control process exited, code=exited, status=1/FAILURE[0m[m
-Oct 06 13:18:07 Victor systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mpostgresql.service: Failed with result 'exit-code'.[0m[m
-Oct 06 13:18:07 Victor systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start PostgreSQL 19 Database Server.[0m[m
-[7mlines 1-14/14 (END)[27m[K[K[K[7mlines 1-14/14 (END)[27m[K[K[K[7mlines 1-14/14 (END)[27m[K[K[K[7mlines 1-14/14 (END)[27m[K[K[K[7mlines 1-14/14 (END)[27m[K[K[K[7mlines 1-14/14 (END)[27m[K[K[K[7mlines 1-14/14 (END)[27m[K[K[K[7mlines 1-14/14 (END)[27m[K[K[K[7mlines 1-14/14 (END)[27m[K[K [K^X^X[K[?1l>
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7mps aux | grep postgres[27mps aux | grep postgres
-[?2004l[01;31m[Kpostgres[m[K    1032  0.0  0.6 204580 23552 ?        Ss   13:14   0:00 /usr/local/pgsql/bin/[01;31m[Kpostgres[m[K -D /usr/local/pgsql/data
-[01;31m[Kpostgres[m[K    1033  0.0  0.1 204712  4204 ?        Ss   13:14   0:00 [01;31m[Kpostgres[m[K: io worker 0
-[01;31m[Kpostgres[m[K    1034  0.0  0.0 204580  3052 ?        Ss   13:14   0:00 [01;31m[Kpostgres[m[K: io worker 1
-[01;31m[Kpostgres[m[K    1035  0.0  0.0 204580  3052 ?        Ss   13:14   0:00 [01;31m[Kpostgres[m[K: io worker 2
-[01;31m[Kpostgres[m[K    1036  0.0  0.0 204712  3180 ?        Ss   13:14   0:00 [01;31m[Kpostgres[m[K: checkpointer 
-[01;31m[Kpostgres[m[K    1037  0.0  0.1 204740  4332 ?        Ss   13:14   0:00 [01;31m[Kpostgres[m[K: background writer 
-[01;31m[Kpostgres[m[K    1039  0.0  0.1 204712  7532 ?        Ss   13:14   0:00 [01;31m[Kpostgres[m[K: walwriter 
-[01;31m[Kpostgres[m[K    1040  0.0  0.1 206160  6508 ?        Ss   13:14   0:00 [01;31m[Kpostgres[m[K: autovacuum launcher 
-[01;31m[Kpostgres[m[K    1041  0.0  0.1 206160  5740 ?        Ss   13:14   0:00 [01;31m[Kpostgres[m[K: logical replication launcher 
-victorl+    1483  0.0  0.0   4028  2176 pts/2    S+   13:19   0:00 grep --color=auto [01;31m[Kpostgres[m[K
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7msudo pkill postgres[27msudo pkill postgres
-[?2004l[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ sudo pkill postgres[3@ps aux | grep[C[C[C[C[C[C[C[C[C
-[?2004lvictorl+    1489  0.0  0.0   4028  2176 pts/2    S+   13:19   0:00 grep --color=auto [01;31m[Kpostgres[m[K
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7msudo mkdir -p /usr/local/pgsql[27m
-[7msudo chown postgres:postgres /usr/local/pgsql[27m[Asudo mkdir -p /usr/local/pgsql
-sudo chown postgres:postgres /usr/local/pgsql
-[?2004l[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7msudo systemctl status postgresql[27msudo systemctl status postgresql
-[?2004l[?1h=[0;1;31m×[0m postgresql.service - PostgreSQL 19 Database Server[m
-     Loaded: loaded (/etc/systemd/system/postgresql.service; disabled; vendor preset: enabled)[m
-     Active: [0;1;31mfailed[0m (Result: exit-code) since Mon 2025-10-06 13:18:07 -03; 1min 27s ago[m
-    Process: 1474 ExecStart=/usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data -l /usr/local/pgsql/logfile [0;1;31m([m[7m>[27m
-        CPU: 16ms[m
-[m
-Oct 06 13:18:07 Victor systemd[1]: Starting PostgreSQL 19 Database Server...[m
-Oct 06 13:18:07 Victor pg_ctl[1474]: pg_ctl: another server might be running; trying to start server anyway[m
-Oct 06 13:18:07 Victor pg_ctl[1474]: waiting for server to start.... stopped waiting[m
-Oct 06 13:18:07 Victor pg_ctl[1474]: pg_ctl: could not start server[m
-Oct 06 13:18:07 Victor pg_ctl[1474]: Examine the log output.[m
-Oct 06 13:18:07 Victor systemd[1]: [0;1;39m[0;1;31m[0;1;39mpostgresql.service: Control process exited, code=exited, status=1/FAILURE[0m[m
-Oct 06 13:18:07 Victor systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mpostgresql.service: Failed with result 'exit-code'.[0m[m
-Oct 06 13:18:07 Victor systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start PostgreSQL 19 Database Server.[0m[m
-[7mlines 1-14/14 (END)[27m[K[K[K[7mlines 1-14/14 (END)[27m[K[K[K[7mlines 1-14/14 (END)[27m[K[K[K[7mlines 1-14/14 (END)[27m[K[K[K[7mlines 1-14/14 (END)[27m[K[K[K[7mlines 1-14/14 (END)[27m[K[K[?1l>
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7msudo systemctl start postgresql[27msudo systemctl start postgresql
-[?2004l[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ sudo systemctl start postgresql[1@tus[C[C[C[C[C[C[C[C[C[C[C
-[?2004l[?1h=[0;1;32m●[0m postgresql.service - PostgreSQL 19 Database Server[m
-     Loaded: loaded (/etc/systemd/system/postgresql.service; disabled; vendor preset: enabled)[m
-     Active: [0;1;32mactive (running)[0m since Mon 2025-10-06 13:19:45 -03; 3s ago[m
-    Process: 1504 ExecStart=/usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data -l /usr/local/pgsql/logfile ([m[7m>[27m
-   Main PID: 1507 (postgres)[m
-      Tasks: 9 (limit: 4570)[m
-     Memory: 19.9M[m
-        CPU: 58ms[m
-     CGroup: /system.slice/postgresql.service[m
-             ├─1507 /usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data[m
-             ├─1508 "postgres: io worker 0" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1509 "postgres: io worker 1" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1510 "postgres: io worker 2" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1511 "postgres: checkpointer " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "[m[7m>[27m
-             ├─1512 "postgres: background writer " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
-             ├─1514 "postgres: walwriter " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "[m[7m>[27m
-             ├─1515 "postgres: autovacuum launcher " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             └─1516 "postgres: logical replication launcher " "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m
-[m
-Oct 06 13:19:45 Victor systemd[1]: Starting PostgreSQL 19 Database Server...[m
-Oct 06 13:19:45 Victor pg_ctl[1504]: waiting for server to start.... done[m
-Oct 06 13:19:45 Victor pg_ctl[1504]: server started[m
-Oct 06 13:19:45 Victor systemd[1]: Started PostgreSQL 19 Database Server.[m
-[7mlines 1-23/23 (END)[27m[K[K [KESCESC[KOO[KFF[K...skipping...
-[1m~[0m
-[1m~[0m
-[1m~[0m
-[1m~[0m
-[0;1;32m●[0m postgresql.service - PostgreSQL 19 Database Server[m
-     Loaded: loaded (/etc/systemd/system/postgresql.service; disabled; vendor preset: enabled)[m
-     Active: [0;1;32mactive (running)[0m since Mon 2025-10-06 13:19:45 -03; 3s ago[m
-    Process: 1504 ExecStart=/usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data -l /usr/local/pgsql/logfile ([m[7m>[27m
-   Main PID: 1507 (postgres)[m
-      Tasks: 9 (limit: 4570)[m
-     Memory: 19.9M[m
-        CPU: 58ms[m
-     CGroup: /system.slice/postgresql.service[m
-             ├─1507 /usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data[m
-             ├─1508 "postgres: io worker 0" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1509 "postgres: io worker 1" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1510 "postgres: io worker 2" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1511 "postgres: checkpointer " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "[m[7m>[27m
-             ├─1512 "postgres: background writer " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
-             ├─1514 "postgres: walwriter " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "[m[7m>[27m
-             ├─1515 "postgres: autovacuum launcher " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             └─1516 "postgres: logical replication launcher " "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m
-[m
-Oct 06 13:19:45 Victor systemd[1]: Starting PostgreSQL 19 Database Server...[m
-Oct 06 13:19:45 Victor pg_ctl[1504]: waiting for server to start.... done[m
-Oct 06 13:19:45 Victor pg_ctl[1504]: server started[m
-Oct 06 13:19:45 Victor systemd[1]: Started PostgreSQL 19 Database Server.[m
-[7mlines 1-23/23 (END)[27m[K[K [KESCESC[KOO[KFF[K...skipping...
-[1m~[0m
-[1m~[0m
-[1m~[0m
-[1m~[0m
-[0;1;32m●[0m postgresql.service - PostgreSQL 19 Database Server[m
-     Loaded: loaded (/etc/systemd/system/postgresql.service; disabled; vendor preset: enabled)[m
-     Active: [0;1;32mactive (running)[0m since Mon 2025-10-06 13:19:45 -03; 3s ago[m
-    Process: 1504 ExecStart=/usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data -l /usr/local/pgsql/logfile ([m[7m>[27m
-   Main PID: 1507 (postgres)[m
-      Tasks: 9 (limit: 4570)[m
-     Memory: 19.9M[m
-        CPU: 58ms[m
-     CGroup: /system.slice/postgresql.service[m
-             ├─1507 /usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data[m
-             ├─1508 "postgres: io worker 0" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1509 "postgres: io worker 1" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1510 "postgres: io worker 2" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1511 "postgres: checkpointer " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "[m[7m>[27m
-             ├─1512 "postgres: background writer " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
-             ├─1514 "postgres: walwriter " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "[m[7m>[27m
-             ├─1515 "postgres: autovacuum launcher " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             └─1516 "postgres: logical replication launcher " "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m
-[m
-Oct 06 13:19:45 Victor systemd[1]: Starting PostgreSQL 19 Database Server...[m
-Oct 06 13:19:45 Victor pg_ctl[1504]: waiting for server to start.... done[m
-Oct 06 13:19:45 Victor pg_ctl[1504]: server started[m
-Oct 06 13:19:45 Victor systemd[1]: Started PostgreSQL 19 Database Server.[m
-[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K66[K~~[K[1m~[0m
-[1m~[0m
-[1m~[0m
-[1m~[0m
-[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K66[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K66[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[KOO[KFF[K...skipping...
-[1m~[0m
-[1m~[0m
-[1m~[0m
-[1m~[0m
-[0;1;32m●[0m postgresql.service - PostgreSQL 19 Database Server[m
-     Loaded: loaded (/etc/systemd/system/postgresql.service; disabled; vendor preset: enabled)[m
-     Active: [0;1;32mactive (running)[0m since Mon 2025-10-06 13:19:45 -03; 3s ago[m
-    Process: 1504 ExecStart=/usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data -l /usr/local/pgsql/logfile ([m[7m>[27m
-   Main PID: 1507 (postgres)[m
-      Tasks: 9 (limit: 4570)[m
-     Memory: 19.9M[m
-        CPU: 58ms[m
-     CGroup: /system.slice/postgresql.service[m
-             ├─1507 /usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data[m
-             ├─1508 "postgres: io worker 0" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1509 "postgres: io worker 1" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1510 "postgres: io worker 2" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1511 "postgres: checkpointer " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "[m[7m>[27m
-             ├─1512 "postgres: background writer " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
-             ├─1514 "postgres: walwriter " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "[m[7m>[27m
-             ├─1515 "postgres: autovacuum launcher " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             └─1516 "postgres: logical replication launcher " "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m
-[m
-Oct 06 13:19:45 Victor systemd[1]: Starting PostgreSQL 19 Database Server...[m
-Oct 06 13:19:45 Victor pg_ctl[1504]: waiting for server to start.... done[m
-Oct 06 13:19:45 Victor pg_ctl[1504]: server started[m
-Oct 06 13:19:45 Victor systemd[1]: Started PostgreSQL 19 Database Server.[m
-[7mlines 1-23/23 (END)[27m[K[K [KESCESC[KOO[KFF[K...skipping...
-[1m~[0m
-[1m~[0m
-[1m~[0m
-[1m~[0m
-[0;1;32m●[0m postgresql.service - PostgreSQL 19 Database Server[m
-     Loaded: loaded (/etc/systemd/system/postgresql.service; disabled; vendor preset: enabled)[m
-     Active: [0;1;32mactive (running)[0m since Mon 2025-10-06 13:19:45 -03; 3s ago[m
-    Process: 1504 ExecStart=/usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data -l /usr/local/pgsql/logfile ([m[7m>[27m
-   Main PID: 1507 (postgres)[m
-      Tasks: 9 (limit: 4570)[m
-     Memory: 19.9M[m
-        CPU: 58ms[m
-     CGroup: /system.slice/postgresql.service[m
-             ├─1507 /usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data[m
-             ├─1508 "postgres: io worker 0" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1509 "postgres: io worker 1" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1510 "postgres: io worker 2" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1511 "postgres: checkpointer " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "[m[7m>[27m
-             ├─1512 "postgres: background writer " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
-             ├─1514 "postgres: walwriter " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "[m[7m>[27m
-             ├─1515 "postgres: autovacuum launcher " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             └─1516 "postgres: logical replication launcher " "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m
-[m
-Oct 06 13:19:45 Victor systemd[1]: Starting PostgreSQL 19 Database Server...[m
-Oct 06 13:19:45 Victor pg_ctl[1504]: waiting for server to start.... done[m
-Oct 06 13:19:45 Victor pg_ctl[1504]: server started[m
-Oct 06 13:19:45 Victor systemd[1]: Started PostgreSQL 19 Database Server.[m
-[7mlines 1-23/23 (END)[27m[K[K [KESCESC[KOO[KFF[K...skipping...
-[1m~[0m
-[1m~[0m
-[1m~[0m
-[1m~[0m
-[0;1;32m●[0m postgresql.service - PostgreSQL 19 Database Server[m
-     Loaded: loaded (/etc/systemd/system/postgresql.service; disabled; vendor preset: enabled)[m
-     Active: [0;1;32mactive (running)[0m since Mon 2025-10-06 13:19:45 -03; 3s ago[m
-    Process: 1504 ExecStart=/usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data -l /usr/local/pgsql/logfile ([m[7m>[27m
-   Main PID: 1507 (postgres)[m
-      Tasks: 9 (limit: 4570)[m
-     Memory: 19.9M[m
-        CPU: 58ms[m
-     CGroup: /system.slice/postgresql.service[m
-             ├─1507 /usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data[m
-             ├─1508 "postgres: io worker 0" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1509 "postgres: io worker 1" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1510 "postgres: io worker 2" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1511 "postgres: checkpointer " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "[m[7m>[27m
-             ├─1512 "postgres: background writer " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
-             ├─1514 "postgres: walwriter " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "[m[7m>[27m
-             ├─1515 "postgres: autovacuum launcher " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             └─1516 "postgres: logical replication launcher " "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m
-[m
-Oct 06 13:19:45 Victor systemd[1]: Starting PostgreSQL 19 Database Server...[m
-Oct 06 13:19:45 Victor pg_ctl[1504]: waiting for server to start.... done[m
-Oct 06 13:19:45 Victor pg_ctl[1504]: server started[m
-Oct 06 13:19:45 Victor systemd[1]: Started PostgreSQL 19 Database Server.[m
-[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K55[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K55[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K55[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K55[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K55[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K55[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K55[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K55[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K55[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K55[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K55[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K55[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K55[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K55[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K66[K~~[K[1m~[0m
-[1m~[0m
-[1m~[0m
-[1m~[0m
-[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K66[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K66[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K [KESCESC[K[[[K66[K~~[K[K[7mlines 1-23/23 (END)[27m[K[K[K[7mlines 1-23/23 (END)[27m[K[K[K[7mlines 1-23/23 (END)[27m[K[K[K[7mlines 1-23/23 (END)[27m[K[K [K^X^X[K[?1l>
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ sudo systemctl status postgresql[1Prt[C[C[C[C[C[C[C[C[C[C[C[1@tus[C[C[C[C[C[C[C[C[C[C[Cchown postgres:postgres /usr/local/pgsql[13Psystemctl status postgresql[1Prt[C[C[C[C[C[C[C[C[C[C[C[1@tus[C[C[C[C[C[C[C[C[C[C[C
-[?2004l[?1h=[0;1;32m●[0m postgresql.service - PostgreSQL 19 Database Server[m
-     Loaded: loaded (/etc/systemd/system/postgresql.service; disabled; vendor preset: enabled)[m
-     Active: [0;1;32mactive (running)[0m since Mon 2025-10-06 13:19:45 -03; 34s ago[m
-    Process: 1504 ExecStart=/usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data -l /usr/local/pgsql/logfile ([m[7m>[27m
-   Main PID: 1507 (postgres)[m
-      Tasks: 9 (limit: 4570)[m
-     Memory: 19.9M[m
-        CPU: 69ms[m
-     CGroup: /system.slice/postgresql.service[m
-             ├─1507 /usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data[m
-             ├─1508 "postgres: io worker 0" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1509 "postgres: io worker 1" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1510 "postgres: io worker 2" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             ├─1511 "postgres: checkpointer " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "[m[7m>[27m
-             ├─1512 "postgres: background writer " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
-             ├─1514 "postgres: walwriter " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "[m[7m>[27m
-             ├─1515 "postgres: autovacuum launcher " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" [m[7m>[27m
-             └─1516 "postgres: logical replication launcher " "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m
-[m
-Oct 06 13:19:45 Victor systemd[1]: Starting PostgreSQL 19 Database Server...[m
-Oct 06 13:19:45 Victor pg_ctl[1504]: waiting for server to start.... done[m
-Oct 06 13:19:45 Victor pg_ctl[1504]: server started[m
-Oct 06 13:19:45 Victor systemd[1]: Started PostgreSQL 19 Database Server.[m
-[7mlines 1-23/23 (END)[27m[K[K[?1l>
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ sudo systemctl status postgresql[1Prt[C[C[C[C[C[C[C[C[C[C[C[1@tus[C[C[C[C[C[C[C[C[C[C[Cchown postgres:postgres /usr/local/pgsql[15Pmkdir -p[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pps aux | grep postgres
-[?2004l[01;31m[Kpostgres[m[K    1507  0.0  0.5 204576 23296 ?        Ss   13:19   0:00 /usr/local/pgsql/bin/[01;31m[Kpostgres[m[K -D /usr/local/pgsql/data
-[01;31m[Kpostgres[m[K    1508  0.0  0.0 204712  3568 ?        Ss   13:19   0:00 [01;31m[Kpostgres[m[K: io worker 0
-[01;31m[Kpostgres[m[K    1509  0.0  0.0 204576  2928 ?        Ss   13:19   0:00 [01;31m[Kpostgres[m[K: io worker 1
-[01;31m[Kpostgres[m[K    1510  0.0  0.0 204576  2928 ?        Ss   13:19   0:00 [01;31m[Kpostgres[m[K: io worker 2
-[01;31m[Kpostgres[m[K    1511  0.0  0.0 204712  3184 ?        Ss   13:19   0:00 [01;31m[Kpostgres[m[K: checkpointer 
-[01;31m[Kpostgres[m[K    1512  0.0  0.0 204736  3568 ?        Ss   13:19   0:00 [01;31m[Kpostgres[m[K: background writer 
-[01;31m[Kpostgres[m[K    1514  0.0  0.1 204712  7280 ?        Ss   13:19   0:00 [01;31m[Kpostgres[m[K: walwriter 
-[01;31m[Kpostgres[m[K    1515  0.0  0.1 206168  6384 ?        Ss   13:19   0:00 [01;31m[Kpostgres[m[K: autovacuum launcher 
-[01;31m[Kpostgres[m[K    1516  0.0  0.1 206160  5744 ?        Ss   13:19   0:00 [01;31m[Kpostgres[m[K: logical replication launcher 
-victorl+    1529  0.0  0.0   4028  2176 pts/2    S+   13:20   0:00 grep --color=auto [01;31m[Kpostgres[m[K
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [7msudo systemctl enable postgresql[27msudo systemctl enable postgresql
-[?2004lCreated symlink /etc/systemd/system/multi-user.target.wants/postgresql.service → /etc/systemd/system/postgresql.service.
+drwxr-xr-x 2 victorlzfr victorlzfr 4096 Oct  6 13:33 [0m[01;34mmilestones[0m
+drwxr-xr-x 2 victorlzfr victorlzfr 4096 Oct  6 13:30 [01;34mscripts[0m
+-rw-r--r-- 1 victorlzfr victorlzfr    0 Oct  6 13:37 session.log
 [?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [?2004l
 exit
 
-Script done on 2025-10-06 13:21:24-03:00 [COMMAND_EXIT_CODE="0"]
+Script done on 2025-10-06 13:37:57-03:00 [COMMAND_EXIT_CODE="0"]
