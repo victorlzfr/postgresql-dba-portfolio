@@ -1,11 +1,359 @@
-Script started on 2025-10-06 13:37:47-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="117" LINES="28"]
-[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ sudo systemctl enable postgresql[10Pps aux | grep postgressudo systemctl status postgresql[10Pps aux | grep postgressudo systemctl enable postgresql[Kls -l/[K
-[?2004ltotal 12
--rw-r--r-- 1 victorlzfr victorlzfr 1057 Oct  5 12:11 README.md
-drwxr-xr-x 2 victorlzfr victorlzfr 4096 Oct  6 13:33 [0m[01;34mmilestones[0m
-drwxr-xr-x 2 victorlzfr victorlzfr 4096 Oct  6 13:30 [01;34mscripts[0m
--rw-r--r-- 1 victorlzfr victorlzfr    0 Oct  6 13:37 session.log
+Script started on 2025-10-08 17:35:59-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="117" LINES="32"]
+[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ psql -l
+[?2004l                                                   List of databases
+    Name    |   Owner    | Encoding | Locale Provider | Collate |  Ctype  | Locale | ICU Rules |   Access privileges 
+  
+------------+------------+----------+-----------------+---------+---------+--------+-----------+---------------------
+--
+ mydb       | victorlzfr | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | 
+ postgres   | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | 
+ template0  | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | =c/postgres         
+ +
+            |            |          |                 |         |         |        |           | postgres=CTc/postgre
+s
+ template1  | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | =c/postgres         
+ +
+            |            |          |                 |         |         |        |           | postgres=CTc/postgre
+s
+ test       | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | 
+ victorlzfr | victorlzfr | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | 
+(6 rows)
+
+[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ /l[K[K\l
+[?2004ll: command not found
+[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ psql
+[?2004lpsql (19devel)
+Type "help" for help.
+
+[?2004hvictorlzfr=> SELECT * from my
+
+victorlzfr=> SELECT * from myb[Kdb
+[?2004l[?2004hvictorlzfr-> \qdt[1Pq[KSELECT * FROM mydb[Kb
+[?2004l[?2004hvictorlzfr-> \l
+[?2004l                                                   List of databases
+    Name    |   Owner    | Encoding | Locale Provider | Collate |  Ctype  | Locale | ICU Rules |   Access privileges 
+  
+------------+------------+----------+-----------------+---------+---------+--------+-----------+---------------------
+--
+ mydb       | victorlzfr | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | 
+ postgres   | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | 
+ template0  | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | =c/postgres         
+ +
+            |            |          |                 |         |         |        |           | postgres=CTc/postgre
+s
+ template1  | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | =c/postgres         
+ +
+            |            |          |                 |         |         |        |           | postgres=CTc/postgre
+s
+ test       | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | 
+ victorlzfr | victorlzfr | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        |           | 
+(6 rows)
+
+[?2004hvictorlzfr-> \lSELECT * from mydb
+SELECT * FROM mydb[A\q[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CdtCREATE TABLE cities (
+    name            varchar(80),
+    location        point
+);[A[A[A[C[C[C[C[C[C[C[C[C[C[C\dt[K
+[K
+[K
+[K[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CCREATE TABLE cities (
+    name            varchar(80),
+    location        point
+);[A[A[A[C[C[C[C[C[C[C[C[C[C[C\dt[K
+[K
+[K
+[K[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CCREATE TABLE weather (
+    city            varchar(80),
+    temp_lo         int,           -- low temperature
+    temp_hi         int,           -- high temperature
+    prcp            real,          -- precipitation
+    date            date
+);[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[9P\i basics.sql
+[K
+[K
+[K
+[K
+[K
+[K[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CCREATE TABLE weather (
+    city            varchar(80),
+    temp_lo         int,           -- low temperature
+    temp_hi         int,           -- high temperature
+    prcp            real,          -- precipitation
+    date            date
+);[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C\dt[K
+[K
+[K
+[K
+[K
+[K
+[K[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CCREATE TABLE cities (
+    name            varchar(80),
+    location        point
+);[A[A[A[C[C[C[C[C[C[C[C[C[C[C\dt[K
+[K
+[K
+[K[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1PqSELECT * from mydb
+SELECT * FROM mydb[A\l[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K\c mydb [K[K[Kdb 
+[?2004lYou are now connected to database "mydb" as user "victorlzfr".
+[?2004hmydb-> \c mydb l[KSELECT * from mydb
+SELECT * FROM mydb[A[C[C[C[C[C[C[C\q[K
+[K[A[C[C[C[C[C[C[C[C[CSELECT * from mydb
+SELECT * FROM mydb[A[C[C[C[C[C[C[C\l[K
+[K[A[C[C[C[C[C[C[C[C[Cc mydb [K\c mydb l[KSELECT * from mydb
+SELECT * FROM mydb[A[C[C[C[C[C[C[C\q[K
+[K[A[C[C[C[C[C[C[C[C[CdtCREATE TABLE cities (
+    name            varchar(80),
+    location        point
+);[A[A[A[C[C[C[C[C\dt[K
+[K
+[K
+[K[A[A[A[C[C[C[C[C[C[C[C[C[C
+[?2004l            List of tables
+ Schema |  Name   | Type  |   Owner    
+--------+---------+-------+------------
+ public | cities  | table | victorlzfr
+ public | weather | table | victorlzfr
+(2 rows)
+
+[?2004hmydb-> \dtc mydb [K[K[K[K[K[Kmydb-> \c [Kmydb-> \c [Kmydb-> \c [Kmydb-> \c [Kmydb-> \c [Kmydb-> \c [Kmydb-> \c victorlzfr 
+[?2004lYou are now connected to database "victorlzfr" as user "victorlzfr".
+[?2004hvictorlzfr-> \c victorlzfr dt[K
+[?2004lDid not find any tables.
+[?2004hvictorlzfr-> \dtc victorlzfr dt[Kc victorlzfr [K[K[K[K[K[K[K[K[K[K[Kmydb 
+[?2004lYou are now connected to database "mydb" as user "victorlzfr".
+[?2004hmydb-> \c mydb dt[Kc victorlzfr [C[C[C[C[C[C[C[Cdt[Kc mydb l[KSELECT * from mydb
+SELECT * FROM mydb[A[C[C[C[C[C[C[C\l[K
+[K[A[C[C[C[C[C[C[C[C[C
+[?2004l                                                   List of databases
+    Name    |   Owner    | Encoding | Locale Provider | Collate |  Ctype  | Locale | 
+ICU Rules |   Access privileges   
+------------+------------+----------+-----------------+---------+---------+--------+-
+----------+-----------------------
+ mydb       | victorlzfr | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        | 
+          | 
+ postgres   | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        | 
+          | 
+ template0  | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        | 
+          | =c/postgres          +
+            |            |          |                 |         |         |        | 
+          | postgres=CTc/postgres
+ template1  | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        | 
+          | =c/postgres          +
+            |            |          |                 |         |         |        | 
+          | postgres=CTc/postgres
+ test       | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        | 
+          | 
+ victorlzfr | victorlzfr | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        | 
+          | 
+(6 rows)
+
+[?2004hmydb-> \lc mydb dt[Kc victorlzfr [C[C[C[C[C[C[C[Cdt[K
+[?2004l            List of tables
+ Schema |  Name   | Type  |   Owner    
+--------+---------+-------+------------
+ public | cities  | table | victorlzfr
+ public | weather | table | victorlzfr
+(2 rows)
+
+[?2004hmydb-> \dt[1Pl[Kd my
+
+mydb-> \d mydb
+[?2004lDid not find any relation named "mydb".
+[?2004hmydb-> \d mydb[K[K[K[Kvictorlzfr
+[?2004lDid not find any relation named "victorlzfr".
+[?2004hmydb-> \d victorlzfr[K[K[K[K[K[K[K[K[K[Kte[K[Kcities 
+[?2004l                       Table "public.cities"
+  Column  |         Type          | Collation | Nullable | Default 
+----------+-----------------------+-----------+----------+---------
+ name     | character varying(80) |           |          | 
+ location | point                 |           |          | 
+
+[?2004hmydb-> \d cities [1P [1P [1P [1P [1P [1P w eather e [1P [1P r 
+[?2004l                      Table "public.weather"
+ Column  |         Type          | Collation | Nullable | Default 
+---------+-----------------------+-----------+----------+---------
+ city    | character varying(80) |           |          | 
+ temp_lo | integer               |           |          | 
+ temp_hi | integer               |           |          | 
+ prcp    | real                  |           |          | 
+ date    | date                  |           |          | 
+
+[?2004hmydb-> \d weather [1Pcities[C[1@weather[C[1Pcities[Cvictorlzfr[6Pmydbt[K[K[Kl
+[?2004l                                                   List of databases
+    Name    |   Owner    | Encoding | Locale Provider | Collate |  Ctype  | Locale | 
+ICU Rules |   Access privileges   
+------------+------------+----------+-----------------+---------+---------+--------+-
+----------+-----------------------
+ mydb       | victorlzfr | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        | 
+          | 
+ postgres   | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        | 
+          | 
+ template0  | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        | 
+          | =c/postgres          +
+            |            |          |                 |         |         |        | 
+          | postgres=CTc/postgres
+ template1  | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        | 
+          | =c/postgres          +
+            |            |          |                 |         |         |        | 
+          | postgres=CTc/postgres
+ test       | postgres   | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        | 
+          | 
+ victorlzfr | victorlzfr | UTF8     | libc            | C.UTF-8 | C.UTF-8 |        | 
+          | 
+(6 rows)
+
+[?2004hmydb-> postgres
+[?2004l[?2004hmydb-> \ld weather [C[C[C[C[C[C[C[Cl[K/[K[Kc postgres 
+[?2004lYou are now connected to database "postgres" as user "victorlzfr".
+[?2004hpostgres-> \c postgres [4Ppostgres\l[Kd weather [1Pcities[Cvictorlzfr[6Pmydbt[K
+[?2004lDid not find any tables.
+[?2004hpostgres-> \dtc postgres [K[K[K[K[K[K[K[K[Kmydb 
+[?2004lYou are now connected to database "mydb" as user "victorlzfr".
+[?2004hmydb-> \conninfor[K
+[?2004l      Connection Information
+      Parameter       |   Value    
+----------------------+------------
+ Database             | mydb
+ Client User          | victorlzfr
+ Socket Directory     | /tmp
+ Server Port          | 5432
+ Options              | 
+ Protocol Version     | 3.0
+ Password Used        | false
+ GSSAPI Authenticated | false
+ Backend PID          | 1458
+ SSL Connection       | false
+ Superuser            | off
+ Hot Standby          | off
+(12 rows)
+
+[?2004hmydb-> \q
+[?2004l[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ psql -d mydb 
+[?2004lpsql (19devel)
+Type "help" for help.
+
+[?2004hmydb=> \conn
+\connect   \conninfo  
+mydb=> \conninfo 
+[?2004l      Connection Information
+      Parameter       |   Value    
+----------------------+------------
+ Database             | mydb
+ Client User          | victorlzfr
+ Socket Directory     | /tmp
+ Server Port          | 5432
+ Options              | 
+ Protocol Version     | 3.0
+ Password Used        | false
+ GSSAPI Authenticated | false
+ Backend PID          | 1488
+ SSL Connection       | false
+ Superuser            | off
+ Hot Standby          | off
+(12 rows)
+
+[?2004hmydb=> \conninfo [C[C[C[C[C[C[C[K\conninfo q[K
+[?2004l[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ psql -d mydb -U postgres tgres
+[?2004lpsql: warning: extra command-line argument "tgres" ignored
+psql (19devel)
+Type "help" for help.
+
+[?2004hmydb=# \qconninfo 
+[?2004l     Connection Information
+      Parameter       |  Value   
+----------------------+----------
+ Database             | mydb
+ Client User          | postgres
+ Socket Directory     | /tmp
+ Server Port          | 5432
+ Options              | 
+ Protocol Version     | 3.0
+ Password Used        | false
+ GSSAPI Authenticated | false
+ Backend PID          | 1495
+ SSL Connection       | false
+ Superuser            | on
+ Hot Standby          | off
+(12 rows)
+
+[?2004hmydb=# \conninfo q[K
+[?2004l[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ psql -d mydb -U postgres tgres[K[K[K[K[K[K 
+[?2004lpsql (19devel)
+Type "help" for help.
+
+[?2004hmydb=# \qconninfo q[Kconninfo q[K[Kdt
+[?2004l            List of tables
+ Schema |  Name   | Type  |   Owner    
+--------+---------+-------+------------
+ public | cities  | table | victorlzfr
+ public | weather | table | victorlzfr
+(2 rows)
+
+[?2004hmydb=# \dt[1Pq
+[?2004l[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ psql -d mydb -U postgres tgres[K[K -d mydb 
+[?2004lpsql (19devel)
+Type "help" for help.
+
+[?2004hmydb=> SELECT * from mu[Kydb;
+[?2004lERROR:  relation "mydb" does not exist
+LINE 1: SELECT * from mydb;
+                      ^
+[?2004hmydb=> SELECT * from mydb;[K[K[K[K[Kcities 
+[?2004l[?2004hmydb-> ;
+[?2004l name | location 
+------+----------
+(0 rows)
+
+[?2004hmydb=> SELECT * from cities 
+;[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K;
+[?2004l name | location 
+------+----------
+(0 rows)
+
+[?2004hmydb=> SELECT * from cities;[K[K[K[K[K[K[Kw'[Keather [K;
+[?2004l city | temp_lo | temp_hi | prcp | date 
+------+---------+---------+------+------
+(0 rows)
+
+[?2004hmydb=> ^C[?2004l
+[?2004hmydb=> ^C[?2004l
+[?2004hmydb=> select
+[?2004l[?2004hmydb-> ^C[?2004l
+[?2004hmydb=> SELECT * from weather;[1Pcities; 
+;[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pmydb;
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C\q[Kdt
+[?2004l            List of tables
+ Schema |  Name   | Type  |   Owner    
+--------+---------+-------+------------
+ public | cities  | table | victorlzfr
+ public | weather | table | victorlzfr
+(2 rows)
+
+[?2004hmydb=> \dt[K weather 
+[?2004l                      Table "public.weather"
+ Column  |         Type          | Collation | Nullable | Default 
+---------+-----------------------+-----------+----------+---------
+ city    | character varying(80) |           |          | 
+ temp_lo | integer               |           |          | 
+ temp_hi | integer               |           |          | 
+ prcp    | real                  |           |          | 
+ date    | date                  |           |          | 
+
+[?2004hmydb=> \d weather [K[K[K[K[K[K[Keather c
+
+mydb=> \d weather c[K[K[K[K[K[K[K[K[Kcities 
+[?2004l                       Table "public.cities"
+  Column  |         Type          | Collation | Nullable | Default 
+----------+-----------------------+-----------+----------+---------
+ name     | character varying(80) |           |          | 
+ location | point                 |           |          | 
+
+[?2004hmydb=> ^C[?2004l
+[?2004hmydb=> \d cities [1@weather[Ct[K[K[Kq
+[?2004l[?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ psql -d mydb -U postgres [K[K^C[?2004l[?2004h[?2004l
 [?2004h]0;victorlzfr@Victor: ~/postgresql-learning[01;32mvictorlzfr@Victor[00m:[01;34m~/postgresql-learning[00m$ [?2004l
 exit
 
-Script done on 2025-10-06 13:37:57-03:00 [COMMAND_EXIT_CODE="0"]
+Script done on 2025-10-08 18:24:50-03:00 [COMMAND_EXIT_CODE="130"]
