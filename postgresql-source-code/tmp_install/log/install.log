@@ -1,0 +1,1611 @@
+make[1]: Entering directory '/home/victorlzfr/postgresql-install'
+make -C src install
+make[2]: Entering directory '/home/victorlzfr/postgresql-install/src'
+make -C common install
+make[3]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 644  libpgcommon.a '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/libpgcommon.a'
+/usr/bin/install -c -m 644  libpgcommon_shlib.a '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/libpgcommon_shlib.a'
+make[3]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C port install
+make[3]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 644  libpgport.a '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/libpgport.a'
+/usr/bin/install -c -m 644  libpgport_shlib.a '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/libpgport_shlib.a'
+make[3]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C timezone install
+make[3]: Entering directory '/home/victorlzfr/postgresql-install/src/timezone'
+make -C ../../src/port all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../src/common all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share'
+./zic -d '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/timezone'  ./data/tzdata.zi
+make -C tznames install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/timezone/tznames'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/timezonesets'
+/usr/bin/install -c -m 644 ./Africa.txt ./America.txt ./Antarctica.txt ./Asia.txt ./Atlantic.txt ./Australia.txt ./Etc.txt ./Europe.txt ./Indian.txt ./Pacific.txt '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/timezonesets'
+/usr/bin/install -c -m 644 ./Default ./Australia ./India '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/timezonesets'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/timezone/tznames'
+make[3]: Leaving directory '/home/victorlzfr/postgresql-install/src/timezone'
+make -C backend install
+make[3]: Entering directory '/home/victorlzfr/postgresql-install/src/backend'
+make -C ../../src/port all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../src/common all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../include/catalog generated-headers
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/include/catalog'
+make[4]: Nothing to be done for 'generated-headers'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/include/catalog'
+make -C utils generated-header-symlinks
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils'
+make -C adt jsonpath_gram.h
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/adt'
+make[5]: 'jsonpath_gram.h' is up to date.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/adt'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils'
+make -C access all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access'
+make -C brin all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/brin'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/brin'
+make -C common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/common'
+make -C gin all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/gin'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/gin'
+make -C gist all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/gist'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/gist'
+make -C hash all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/hash'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/hash'
+make -C heap all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/heap'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/heap'
+make -C index all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/index'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/index'
+make -C nbtree all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/nbtree'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/nbtree'
+make -C rmgrdesc all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/rmgrdesc'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/rmgrdesc'
+make -C spgist all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/spgist'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/spgist'
+make -C sequence all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/sequence'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/sequence'
+make -C table all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/table'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/table'
+make -C tablesample all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/tablesample'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/tablesample'
+make -C transam all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/transam'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/transam'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access'
+make -C archive all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/archive'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/archive'
+make -C backup all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/backup'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/backup'
+make -C bootstrap all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/bootstrap'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/bootstrap'
+make -C catalog all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/catalog'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/catalog'
+make -C parser all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/parser'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/parser'
+make -C commands all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/commands'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/commands'
+make -C executor all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/executor'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/executor'
+make -C foreign all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/foreign'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/foreign'
+make -C lib all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/lib'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/lib'
+make -C libpq all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/libpq'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/libpq'
+make -C main all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/main'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/main'
+make -C nodes all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/nodes'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/nodes'
+make -C optimizer all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/optimizer'
+make -C geqo all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/geqo'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/geqo'
+make -C path all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/path'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/path'
+make -C plan all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/plan'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/plan'
+make -C prep all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/prep'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/prep'
+make -C util all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/util'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/util'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/optimizer'
+make -C partitioning all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/partitioning'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/partitioning'
+make -C port all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/port'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/port'
+make -C postmaster all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/postmaster'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/postmaster'
+make -C regex all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/regex'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/regex'
+make -C replication all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/replication'
+make -C logical all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/replication/logical'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/replication/logical'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/replication'
+make -C rewrite all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/rewrite'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/rewrite'
+make -C statistics all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/statistics'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/statistics'
+make -C storage all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage'
+make -C aio all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/aio'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/aio'
+make -C buffer all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/buffer'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/buffer'
+make -C file all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/file'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/file'
+make -C freespace all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/freespace'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/freespace'
+make -C ipc all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/ipc'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/ipc'
+make -C large_object all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/large_object'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/large_object'
+make -C lmgr all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/lmgr'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/lmgr'
+make -C page all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/page'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/page'
+make -C smgr all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/smgr'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/smgr'
+make -C sync all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/sync'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/sync'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage'
+make -C tcop all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/tcop'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/tcop'
+make -C tsearch all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/tsearch'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/tsearch'
+make -C utils all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils'
+make -C activity all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/activity'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/activity'
+make -C adt all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/adt'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/adt'
+make -C cache all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/cache'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/cache'
+make -C error all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/error'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/error'
+make -C fmgr all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/fmgr'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/fmgr'
+make -C hash all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/hash'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/hash'
+make -C init all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/init'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/init'
+make -C mb all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb'
+make -C misc all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/misc'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/misc'
+make -C mmgr all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mmgr'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mmgr'
+make -C resowner all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/resowner'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/resowner'
+make -C sort all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/sort'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/sort'
+make -C time all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/time'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/time'
+make -C adt jsonpath_gram.h
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/adt'
+make[5]: 'jsonpath_gram.h' is up to date.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/adt'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils'
+make -C ../../src/timezone all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/timezone'
+make -C ../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/timezone'
+make -C jit all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/jit'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/jit'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin' '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share'
+/usr/bin/install -c  postgres '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/postgres'
+make -C access install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access'
+make -C brin install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/brin'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/brin'
+make -C common install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/common'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/common'
+make -C gin install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/gin'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/gin'
+make -C gist install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/gist'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/gist'
+make -C hash install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/hash'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/hash'
+make -C heap install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/heap'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/heap'
+make -C index install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/index'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/index'
+make -C nbtree install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/nbtree'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/nbtree'
+make -C rmgrdesc install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/rmgrdesc'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/rmgrdesc'
+make -C spgist install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/spgist'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/spgist'
+make -C sequence install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/sequence'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/sequence'
+make -C table install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/table'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/table'
+make -C tablesample install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/tablesample'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/tablesample'
+make -C transam install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/access/transam'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access/transam'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/access'
+make -C archive install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/archive'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/archive'
+make -C backup install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/backup'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/backup'
+make -C bootstrap install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/bootstrap'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/bootstrap'
+make -C catalog install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/catalog'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/catalog'
+make -C parser install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/parser'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/parser'
+make -C commands install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/commands'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/commands'
+make -C executor install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/executor'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/executor'
+make -C foreign install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/foreign'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/foreign'
+make -C lib install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/lib'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/lib'
+make -C libpq install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/libpq'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/libpq'
+make -C main install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/main'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/main'
+make -C nodes install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/nodes'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/nodes'
+make -C optimizer install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/optimizer'
+make -C geqo install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/geqo'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/geqo'
+make -C path install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/path'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/path'
+make -C plan install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/plan'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/plan'
+make -C prep install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/prep'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/prep'
+make -C util install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/util'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/optimizer/util'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/optimizer'
+make -C partitioning install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/partitioning'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/partitioning'
+make -C port install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/port'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/port'
+make -C postmaster install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/postmaster'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/postmaster'
+make -C regex install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/regex'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/regex'
+make -C replication install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/replication'
+make -C logical install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/replication/logical'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/replication/logical'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/replication'
+make -C rewrite install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/rewrite'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/rewrite'
+make -C statistics install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/statistics'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/statistics'
+make -C storage install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage'
+make -C aio install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/aio'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/aio'
+make -C buffer install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/buffer'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/buffer'
+make -C file install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/file'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/file'
+make -C freespace install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/freespace'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/freespace'
+make -C ipc install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/ipc'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/ipc'
+make -C large_object install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/large_object'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/large_object'
+make -C lmgr install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/lmgr'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/lmgr'
+make -C page install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/page'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/page'
+make -C smgr install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/smgr'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/smgr'
+make -C sync install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/storage/sync'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage/sync'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/storage'
+make -C tcop install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/tcop'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/tcop'
+make -C tsearch install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/tsearch'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/tsearch'
+make -C utils install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils'
+make -C activity install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/activity'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/activity'
+make -C adt install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/adt'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/adt'
+make -C cache install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/cache'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/cache'
+make -C error install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/error'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/error'
+make -C fmgr install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/fmgr'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/fmgr'
+make -C hash install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/hash'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/hash'
+make -C init install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/init'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/init'
+make -C mb install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb'
+make -C misc install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/misc'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/misc'
+make -C mmgr install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mmgr'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mmgr'
+make -C resowner install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/resowner'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/resowner'
+make -C sort install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/sort'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/sort'
+make -C time install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/time'
+make[5]: Nothing to be done for 'install'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/time'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils'
+make -C ../../src/timezone install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/timezone'
+make -C ../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share'
+./zic -d '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/timezone'  ./data/tzdata.zi
+make -C tznames install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/timezone/tznames'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/timezonesets'
+/usr/bin/install -c -m 644 ./Africa.txt ./America.txt ./Antarctica.txt ./Asia.txt ./Atlantic.txt ./Australia.txt ./Etc.txt ./Europe.txt ./Indian.txt ./Pacific.txt '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/timezonesets'
+/usr/bin/install -c -m 644 ./Default ./Australia ./India '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/timezonesets'
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/timezone/tznames'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/timezone'
+make -C jit install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/jit'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/jit'
+make -C catalog install-data
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/catalog'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share'
+/usr/bin/install -c -m 644 ./system_functions.sql '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/system_functions.sql'
+/usr/bin/install -c -m 644 ./system_views.sql '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/system_views.sql'
+/usr/bin/install -c -m 644 ./information_schema.sql '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/information_schema.sql'
+/usr/bin/install -c -m 644 ./sql_features.txt '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/sql_features.txt'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/catalog'
+make -C tsearch install-data
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/tsearch'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share' '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/tsearch_data'
+/usr/bin/install -c -m 644 ./dicts/synonym_sample.syn ./dicts/thesaurus_sample.ths ./dicts/hunspell_sample.affix ./dicts/ispell_sample.affix ./dicts/ispell_sample.dict ./dicts/hunspell_sample_long.affix ./dicts/hunspell_sample_long.dict ./dicts/hunspell_sample_num.affix ./dicts/hunspell_sample_num.dict '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/tsearch_data/'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/tsearch'
+make -C utils install-data
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share'
+/usr/bin/install -c -m 644 ./errcodes.txt '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/errcodes.txt'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils'
+/usr/bin/install -c -m 644 ./libpq/pg_hba.conf.sample '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/pg_hba.conf.sample'
+/usr/bin/install -c -m 644 ./libpq/pg_ident.conf.sample '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/pg_ident.conf.sample'
+/usr/bin/install -c -m 644 ./utils/misc/postgresql.conf.sample '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/postgresql.conf.sample'
+make[3]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend'
+make -C backend/utils/mb/conversion_procs install
+make[3]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs'
+make -C cyrillic_and_mic install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/cyrillic_and_mic'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  cyrillic_and_mic.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/cyrillic_and_mic.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/cyrillic_and_mic'
+make -C euc_cn_and_mic install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/euc_cn_and_mic'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  euc_cn_and_mic.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/euc_cn_and_mic.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/euc_cn_and_mic'
+make -C euc_jp_and_sjis install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/euc_jp_and_sjis'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  euc_jp_and_sjis.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/euc_jp_and_sjis.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/euc_jp_and_sjis'
+make -C euc_kr_and_mic install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/euc_kr_and_mic'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  euc_kr_and_mic.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/euc_kr_and_mic.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/euc_kr_and_mic'
+make -C euc_tw_and_big5 install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/euc_tw_and_big5'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  euc_tw_and_big5.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/euc_tw_and_big5.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/euc_tw_and_big5'
+make -C latin2_and_win1250 install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/latin2_and_win1250'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  latin2_and_win1250.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/latin2_and_win1250.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/latin2_and_win1250'
+make -C latin_and_mic install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/latin_and_mic'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  latin_and_mic.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/latin_and_mic.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/latin_and_mic'
+make -C utf8_and_big5 install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_big5'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  utf8_and_big5.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/utf8_and_big5.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_big5'
+make -C utf8_and_cyrillic install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_cyrillic'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  utf8_and_cyrillic.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/utf8_and_cyrillic.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_cyrillic'
+make -C utf8_and_euc_cn install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_euc_cn'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  utf8_and_euc_cn.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/utf8_and_euc_cn.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_euc_cn'
+make -C utf8_and_euc_jp install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_euc_jp'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  utf8_and_euc_jp.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/utf8_and_euc_jp.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_euc_jp'
+make -C utf8_and_euc_kr install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_euc_kr'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  utf8_and_euc_kr.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/utf8_and_euc_kr.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_euc_kr'
+make -C utf8_and_euc_tw install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_euc_tw'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  utf8_and_euc_tw.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/utf8_and_euc_tw.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_euc_tw'
+make -C utf8_and_gb18030 install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_gb18030'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  utf8_and_gb18030.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/utf8_and_gb18030.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_gb18030'
+make -C utf8_and_gbk install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_gbk'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  utf8_and_gbk.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/utf8_and_gbk.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_gbk'
+make -C utf8_and_iso8859 install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_iso8859'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  utf8_and_iso8859.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/utf8_and_iso8859.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_iso8859'
+make -C utf8_and_iso8859_1 install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_iso8859_1'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  utf8_and_iso8859_1.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/utf8_and_iso8859_1.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_iso8859_1'
+make -C utf8_and_johab install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_johab'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  utf8_and_johab.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/utf8_and_johab.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_johab'
+make -C utf8_and_sjis install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_sjis'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  utf8_and_sjis.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/utf8_and_sjis.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_sjis'
+make -C utf8_and_win install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_win'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  utf8_and_win.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/utf8_and_win.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_win'
+make -C utf8_and_uhc install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_uhc'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  utf8_and_uhc.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/utf8_and_uhc.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_uhc'
+make -C utf8_and_euc2004 install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_euc2004'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  utf8_and_euc2004.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/utf8_and_euc2004.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_euc2004'
+make -C utf8_and_sjis2004 install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_sjis2004'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  utf8_and_sjis2004.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/utf8_and_sjis2004.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/utf8_and_sjis2004'
+make -C euc2004_sjis2004 install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/euc2004_sjis2004'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  euc2004_sjis2004.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/euc2004_sjis2004.so'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs/euc2004_sjis2004'
+make[3]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/utils/mb/conversion_procs'
+make -C backend/snowball install
+make[3]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/snowball'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share' '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/tsearch_data'
+/usr/bin/install -c -m 755  dict_snowball.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/dict_snowball.so'
+/usr/bin/install -c -m 644 snowball_create.sql '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share'
+/usr/bin/install -c -m 644 ./stopwords/danish.stop ./stopwords/dutch.stop ./stopwords/english.stop ./stopwords/finnish.stop ./stopwords/french.stop ./stopwords/german.stop ./stopwords/hungarian.stop ./stopwords/italian.stop ./stopwords/nepali.stop ./stopwords/norwegian.stop ./stopwords/portuguese.stop ./stopwords/russian.stop ./stopwords/spanish.stop ./stopwords/swedish.stop ./stopwords/turkish.stop '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/tsearch_data'
+make[3]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/snowball'
+make -C include install
+make[3]: Entering directory '/home/victorlzfr/postgresql-install/src/include'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/libpq' '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/internal/libpq'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/access '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/archive '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/bootstrap '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/catalog '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/commands '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/common '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/datatype '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/executor '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/fe_utils '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/foreign '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/jit '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/lib '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/libpq '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/mb '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/nodes '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/optimizer '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/parser '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/partitioning '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/postmaster '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/regex '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/replication '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/rewrite '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/statistics '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/storage '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/tcop '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/snowball '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/snowball/libstemmer '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/tsearch '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/tsearch/dicts '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/utils '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/port '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/port/atomics '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/port/win32 '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/port/win32_msvc '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/port/win32_msvc/sys '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/port/win32/arpa '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/port/win32/netinet '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/port/win32/sys '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/portability
+/usr/bin/install -c -m 644 ./postgres_ext.h   '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include'
+/usr/bin/install -c -m 644 ./libpq/libpq-fs.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/libpq'
+/usr/bin/install -c -m 644 pg_config.h     '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include'
+/usr/bin/install -c -m 644 pg_config_os.h  '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include'
+/usr/bin/install -c -m 644 ./pg_config_manual.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include'
+/usr/bin/install -c -m 644 ./c.h            '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/internal'
+/usr/bin/install -c -m 644 ./port.h         '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/internal'
+/usr/bin/install -c -m 644 ./postgres_fe.h  '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/internal'
+/usr/bin/install -c -m 644 ./libpq/pqcomm.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/internal/libpq'
+/usr/bin/install -c -m 644 ./libpq/protocol.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/internal/libpq'
+/usr/bin/install -c -m 644 pg_config.h     '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'
+/usr/bin/install -c -m 644 pg_config_os.h  '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'
+/usr/bin/install -c -m 644 nodes/nodetags.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server/nodes'
+/usr/bin/install -c -m 644 utils/errcodes.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server/utils'
+/usr/bin/install -c -m 644 utils/fmgroids.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server/utils'
+/usr/bin/install -c -m 644 utils/fmgrprotos.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server/utils'
+/usr/bin/install -c -m 644 ./*.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'
+for dir in access archive bootstrap catalog commands common datatype executor fe_utils foreign jit lib libpq mb nodes optimizer parser partitioning postmaster regex replication rewrite statistics storage tcop snowball snowball/libstemmer tsearch tsearch/dicts utils port port/atomics port/win32 port/win32_msvc port/win32_msvc/sys port/win32/arpa port/win32/netinet port/win32/sys portability; do \
+  /usr/bin/install -c -m 644 ./$dir/*.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'/$dir || exit; \
+done
+make -C catalog install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/include/catalog'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share' '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'
+/usr/bin/install -c -m 644 postgres.bki '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/postgres.bki'
+/usr/bin/install -c -m 644 system_constraints.sql '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/system_constraints.sql'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/include/catalog'
+make[3]: Leaving directory '/home/victorlzfr/postgresql-install/src/include'
+make -C interfaces install
+make[3]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces'
+make -C libpq install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib' '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pkgconfig' 
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include' '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/internal' '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share'
+/usr/bin/install -c -m 755  libpq.so.5.19 '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/libpq.so.5.19'
+cd '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib' && \
+rm -f libpq.so.5 && \
+ln -s libpq.so.5.19 libpq.so.5
+cd '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib' && \
+rm -f libpq.so && \
+ln -s libpq.so.5.19 libpq.so
+/usr/bin/install -c -m 644  libpq.a '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/libpq.a'
+/usr/bin/install -c -m 644 libpq.pc '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pkgconfig/libpq.pc'
+/usr/bin/install -c -m 644 ./libpq-fe.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include'
+/usr/bin/install -c -m 644 ./libpq-events.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include'
+/usr/bin/install -c -m 644 ./libpq-int.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/internal'
+/usr/bin/install -c -m 644 ./fe-auth-sasl.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/internal'
+/usr/bin/install -c -m 644 ./pqexpbuffer.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/internal'
+/usr/bin/install -c -m 644 ./pg_service.conf.sample '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/pg_service.conf.sample'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ecpg install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg'
+make -C include install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/include'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include' '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/informix/esql'
+/usr/bin/install -c -m 644 ./ecpgerrno.h ./ecpglib.h ./ecpgtype.h ./sqlca.h ./sql3types.h ./ecpg_informix.h ./pgtypes_error.h ./pgtypes_numeric.h ./pgtypes_timestamp.h ./pgtypes_date.h ./pgtypes_interval.h ./pgtypes.h ./sqlda.h ./sqlda-compat.h ./sqlda-native.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/'
+/usr/bin/install -c -m 644 ./datetime.h ./decimal.h ./sqltypes.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/informix/esql/'
+/usr/bin/install -c -m 644 ../../../../src/interfaces/ecpg/include/ecpg_config.h '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include'
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/include'
+make -C pgtypeslib install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/pgtypeslib'
+make -C ../../../../src/port all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../../src/common all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib' '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pkgconfig' 
+/usr/bin/install -c -m 755  libpgtypes.so.3.19 '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/libpgtypes.so.3.19'
+cd '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib' && \
+rm -f libpgtypes.so.3 && \
+ln -s libpgtypes.so.3.19 libpgtypes.so.3
+cd '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib' && \
+rm -f libpgtypes.so && \
+ln -s libpgtypes.so.3.19 libpgtypes.so
+/usr/bin/install -c -m 644  libpgtypes.a '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/libpgtypes.a'
+/usr/bin/install -c -m 644 libpgtypes.pc '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pkgconfig/libpgtypes.pc'
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/pgtypeslib'
+make -C ecpglib install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/ecpglib'
+make -C ../../../../src/interfaces/libpq all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[7]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[7]: Nothing to be done for 'all'.
+make[7]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[7]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[7]: Nothing to be done for 'all'.
+make[7]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../../src/interfaces/ecpg/pgtypeslib all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/pgtypeslib'
+make -C ../../../../src/port all
+make[7]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[7]: Nothing to be done for 'all'.
+make[7]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../../src/common all
+make[7]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[7]: Nothing to be done for 'all'.
+make[7]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/pgtypeslib'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib' '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pkgconfig' 
+/usr/bin/install -c -m 755  libecpg.so.6.19 '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/libecpg.so.6.19'
+cd '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib' && \
+rm -f libecpg.so.6 && \
+ln -s libecpg.so.6.19 libecpg.so.6
+cd '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib' && \
+rm -f libecpg.so && \
+ln -s libecpg.so.6.19 libecpg.so
+/usr/bin/install -c -m 644  libecpg.a '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/libecpg.a'
+/usr/bin/install -c -m 644 libecpg.pc '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pkgconfig/libecpg.pc'
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/ecpglib'
+make -C compatlib install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/compatlib'
+make -C ../../../../src/interfaces/ecpg/ecpglib all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/ecpglib'
+make -C ../../../../src/interfaces/libpq all
+make[7]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[8]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[8]: Nothing to be done for 'all'.
+make[8]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[8]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[8]: Nothing to be done for 'all'.
+make[8]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[7]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../../src/interfaces/ecpg/pgtypeslib all
+make[7]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/pgtypeslib'
+make -C ../../../../src/port all
+make[8]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[8]: Nothing to be done for 'all'.
+make[8]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../../src/common all
+make[8]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[8]: Nothing to be done for 'all'.
+make[8]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[7]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/pgtypeslib'
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/ecpglib'
+make -C ../../../../src/interfaces/ecpg/pgtypeslib all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/pgtypeslib'
+make -C ../../../../src/port all
+make[7]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[7]: Nothing to be done for 'all'.
+make[7]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../../src/common all
+make[7]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[7]: Nothing to be done for 'all'.
+make[7]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/pgtypeslib'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib' '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pkgconfig' 
+/usr/bin/install -c -m 755  libecpg_compat.so.3.19 '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/libecpg_compat.so.3.19'
+cd '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib' && \
+rm -f libecpg_compat.so.3 && \
+ln -s libecpg_compat.so.3.19 libecpg_compat.so.3
+cd '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib' && \
+rm -f libecpg_compat.so && \
+ln -s libecpg_compat.so.3.19 libecpg_compat.so
+/usr/bin/install -c -m 644  libecpg_compat.a '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/libecpg_compat.a'
+/usr/bin/install -c -m 644 libecpg_compat.pc '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pkgconfig/libecpg_compat.pc'
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/compatlib'
+make -C preproc install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/preproc'
+make -C ../../../../src/port all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../../src/common all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  ecpg '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg/preproc'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/ecpg'
+make[3]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces'
+make -C backend/replication/libpqwalreceiver install
+make[3]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/replication/libpqwalreceiver'
+make -C ../../../../src/interfaces/libpq all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  libpqwalreceiver.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/libpqwalreceiver.so'
+make[3]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/replication/libpqwalreceiver'
+make -C backend/replication/pgoutput install
+make[3]: Entering directory '/home/victorlzfr/postgresql-install/src/backend/replication/pgoutput'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  pgoutput.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pgoutput.so'
+make[3]: Leaving directory '/home/victorlzfr/postgresql-install/src/backend/replication/pgoutput'
+make -C fe_utils install
+make[3]: Entering directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 644  libpgfeutils.a '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/libpgfeutils.a'
+make[3]: Leaving directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+make -C bin install
+make[3]: Entering directory '/home/victorlzfr/postgresql-install/src/bin'
+make -C initdb install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/initdb'
+make -C ../../../src/interfaces/libpq all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/fe_utils all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  initdb '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/initdb'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/initdb'
+make -C pg_amcheck install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pg_amcheck'
+make -C ../../../src/interfaces/libpq all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/fe_utils all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  pg_amcheck '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_amcheck'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pg_amcheck'
+make -C pg_archivecleanup install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pg_archivecleanup'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  pg_archivecleanup '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_archivecleanup'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pg_archivecleanup'
+make -C pg_basebackup install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pg_basebackup'
+make -C ../../../src/interfaces/libpq all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/fe_utils all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  pg_basebackup '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_basebackup'
+/usr/bin/install -c  pg_createsubscriber '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_createsubscriber'
+/usr/bin/install -c  pg_receivewal '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_receivewal'
+/usr/bin/install -c  pg_recvlogical '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_recvlogical'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pg_basebackup'
+make -C pg_checksums install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pg_checksums'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  pg_checksums '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_checksums'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pg_checksums'
+make -C pg_combinebackup install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pg_combinebackup'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/fe_utils all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  pg_combinebackup '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_combinebackup'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pg_combinebackup'
+make -C pg_config install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pg_config'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c -m 755 pg_config '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_config'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pg_config'
+make -C pg_controldata install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pg_controldata'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  pg_controldata '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_controldata'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pg_controldata'
+make -C pg_ctl install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pg_ctl'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  pg_ctl '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_ctl'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pg_ctl'
+make -C pg_dump install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pg_dump'
+make -C ../../../src/interfaces/libpq all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/fe_utils all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  pg_dump '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'/pg_dump
+/usr/bin/install -c  pg_restore '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'/pg_restore
+/usr/bin/install -c  pg_dumpall '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'/pg_dumpall
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pg_dump'
+make -C pg_resetwal install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pg_resetwal'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  pg_resetwal '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_resetwal'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pg_resetwal'
+make -C pg_rewind install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pg_rewind'
+make -C ../../../src/interfaces/libpq all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  pg_rewind '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_rewind'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pg_rewind'
+make -C pg_test_fsync install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pg_test_fsync'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  pg_test_fsync '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_test_fsync'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pg_test_fsync'
+make -C pg_test_timing install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pg_test_timing'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  pg_test_timing '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_test_timing'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pg_test_timing'
+make -C pg_upgrade install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pg_upgrade'
+make -C ../../../src/interfaces/libpq all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/fe_utils all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  pg_upgrade '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_upgrade'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pg_upgrade'
+make -C pg_verifybackup install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pg_verifybackup'
+make -C ../../../src/interfaces/libpq all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/fe_utils all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  pg_verifybackup '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_verifybackup'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pg_verifybackup'
+make -C pg_waldump install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pg_waldump'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  pg_waldump '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_waldump'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pg_waldump'
+make -C pg_walsummary install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pg_walsummary'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/fe_utils all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  pg_walsummary '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pg_walsummary'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pg_walsummary'
+make -C pgbench install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/pgbench'
+make -C ../../../src/interfaces/libpq all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/fe_utils all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  pgbench '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/pgbench'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/pgbench'
+make -C psql install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/psql'
+make -C ../../../src/interfaces/libpq all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/fe_utils all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin' '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share'
+/usr/bin/install -c  psql '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin/psql'
+/usr/bin/install -c -m 644 ./psqlrc.sample '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/psqlrc.sample'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/psql'
+make -C scripts install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/bin/scripts'
+make -C ../../../src/interfaces/libpq all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[6]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make -C ../../../src/fe_utils all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/fe_utils'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'
+/usr/bin/install -c  createdb   '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'/createdb
+/usr/bin/install -c  dropdb     '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'/dropdb
+/usr/bin/install -c  createuser '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'/createuser
+/usr/bin/install -c  dropuser   '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'/dropuser
+/usr/bin/install -c  clusterdb  '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'/clusterdb
+/usr/bin/install -c  vacuumdb   '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'/vacuumdb
+/usr/bin/install -c  reindexdb  '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'/reindexdb
+/usr/bin/install -c  pg_isready '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/bin'/pg_isready
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin/scripts'
+make[3]: Leaving directory '/home/victorlzfr/postgresql-install/src/bin'
+make -C pl install
+make[3]: Entering directory '/home/victorlzfr/postgresql-install/src/pl'
+make -C plpgsql install
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/pl/plpgsql'
+make -C src install
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/pl/plpgsql/src'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib'
+/usr/bin/install -c -m 755  plpgsql.so '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/plpgsql.so'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/extension'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'
+/usr/bin/install -c -m 644 ./plpgsql.control ./plpgsql--1.0.sql '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/share/extension/'
+/usr/bin/install -c -m 644 './plpgsql.h' '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/include/server'
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/pl/plpgsql/src'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/pl/plpgsql'
+make[3]: Leaving directory '/home/victorlzfr/postgresql-install/src/pl'
+make -C makefiles install
+make[3]: Entering directory '/home/victorlzfr/postgresql-install/src/makefiles'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pgxs/src/makefiles'
+/usr/bin/install -c -m 644 ./pgxs.mk '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pgxs/src/makefiles/'
+make[3]: Leaving directory '/home/victorlzfr/postgresql-install/src/makefiles'
+make -C test/regress install
+make[3]: Entering directory '/home/victorlzfr/postgresql-install/src/test/regress'
+make -C ../../../src/port all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pgxs/src/test/regress'
+/usr/bin/install -c  pg_regress '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pgxs/src/test/regress/pg_regress'
+make[3]: Leaving directory '/home/victorlzfr/postgresql-install/src/test/regress'
+make -C test/isolation install
+make[3]: Entering directory '/home/victorlzfr/postgresql-install/src/test/isolation'
+make -C ../../../src/interfaces/libpq all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[5]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/interfaces/libpq'
+make -C ../../../src/port all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/port'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/port'
+make -C ../../../src/common all
+make[4]: Entering directory '/home/victorlzfr/postgresql-install/src/common'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/victorlzfr/postgresql-install/src/common'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pgxs/src/test/isolation'
+/usr/bin/install -c  pg_isolation_regress '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pgxs/src/test/isolation/pg_isolation_regress'
+/usr/bin/install -c  isolationtester '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pgxs/src/test/isolation/isolationtester'
+make[3]: Leaving directory '/home/victorlzfr/postgresql-install/src/test/isolation'
+make -C test/perl install
+make[3]: Entering directory '/home/victorlzfr/postgresql-install/src/test/perl'
+make[3]: Nothing to be done for 'install'.
+make[3]: Leaving directory '/home/victorlzfr/postgresql-install/src/test/perl'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pgxs/src'
+/usr/bin/install -c -m 644 Makefile.global '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pgxs/src/Makefile.global'
+/usr/bin/install -c -m 644 Makefile.port '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pgxs/src/Makefile.port'
+/usr/bin/install -c -m 644 ./Makefile.shlib '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pgxs/src/Makefile.shlib'
+/usr/bin/install -c -m 644 ./nls-global.mk '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pgxs/src/nls-global.mk'
+make[2]: Leaving directory '/home/victorlzfr/postgresql-install/src'
+make -C config install
+make[2]: Entering directory '/home/victorlzfr/postgresql-install/config'
+/usr/bin/mkdir -p '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pgxs/config'
+/usr/bin/install -c -m 755 ./install-sh '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pgxs/config/install-sh'
+/usr/bin/install -c -m 755 ./missing '/home/victorlzfr/postgresql-install/tmp_install/usr/local/pgsql/lib/pgxs/config/missing'
+make[2]: Leaving directory '/home/victorlzfr/postgresql-install/config'
+make[1]: Leaving directory '/home/victorlzfr/postgresql-install'
+make[1]: Entering directory '/home/victorlzfr/postgresql-install/src/test/regress'
+make[1]: Nothing to be done for 'checkprep'.
+make[1]: Leaving directory '/home/victorlzfr/postgresql-install/src/test/regress'
